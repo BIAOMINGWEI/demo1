@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>index</title>
+    <link rel="stylesheet" type="text/css" href="./css/css1.css">
+
+</head>
+
+
+<body class="body">
+    <div id="content">
+        <div id="btn">
+            <h1 id="h1">贪吃蛇</h1>
+            <div id="btn1">
+                <input type="button" class=" btn1" value="开始游戏" onclick="playgame(1)">
+                <input type="button" class=" btn1" value="双人模式" onclick="playgame(2)">
+                <input type="button" class=" btn1" value="自定义" onclick="set()">
+            </div>
+            <div id="btn2">
+                <input class="txt" type="text" readonly="readonly" value="请选择难度" id="input">
+                <input class="btn1" type="button" value="普通" onclick="nandu(2,1,'普通')">
+                <input class="btn1" type="button" value="单人" onclick="ren(1)">
+                <input class="btn1" type="button" value="困难" onclick="nandu(1.5,2,'困难')">
+                <input class="btn1" type="button" value="双人" onclick="ren(2)">
+                <input class="btn1" type="button" value="地狱" onclick="nandu(1,3,'地狱')">
+                <input class="btn1" type="button" value="开始游戏" onclick="playgame()">
+            </div>
+            
+        </div>
+        <div id="jieshao" class="jieshao">
+            游戏说明:
+            <p>本游戏是基于JavaScript的贪吃蛇小游戏</p>
+            <p>玩家需要使用W、A、S、D(玩家一)和↑、↓、←、→(玩家二)按键来操控</p>
+            游戏目标：
+            <p>尽可能的存活更长时间获取更高的分数吧</p>
+        </div>
+        <div id="can">
+            <div id="p">
+                <p>分数:</p>
+                <p id="fenshu">0</p>
+            </div>
+            <canvas id="canvas"></canvas>
+        </div>
+            <div id="jieshu"></div>
+            <a id="a" href="index.html"><input class="btn1" type="button" value="返回菜单"></a>
+            
+        <audio id="audio" src="src/背景音效.mp3" loop="loop"></audio>
+        <audio id="audio2" src="src/失败音效.mp3"></audio>
+        <audio id="audio3" src="src/吃东西.mp3"></audio>
+    </div>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
